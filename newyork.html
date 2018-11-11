@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="style1.css" />
+
+</head>
+<body class="background1">
+<a href="sehirler.html" target="_blank"; class="newyork">
+ <img src="home1.jpg" alt="Anasayfa" width="50" height="50" align="left"> </a>
+    
+<h1 class="welcome">New York City</h1>
+    <div style="float:center">
+  <p class="text1">Özgürlük Heykeli, Empire State Binası, Central Park, Times Meydanı. Bu önemli isimlerin hangi şehri çağrıştırdığını biliyoruz? Amerika Birleşik Devletleri’nin en kalabalık şehri olan New York hakkındaki yazımıza bir an önce başlayarak, aşağıdaki ilginç başlıkları inceleyelim. Alicia Keys yorumuyla <a href="https://www.youtube.com/watch?v=BT4RlDl7z3w" target="_blank"> Empire State of Mind (New York) </a>şarkısını dinlemeyi de unutmayın. </p>
+      <p class="text1">New York’u daha özel bir kent haline getiren özelliklerden birisi coğrafyasıdır. New York Kenti Manhattan, Staten Adası ve Western Long Adası üzerinde yer almaktadır. Kentin yalnızca Bronx bölümü ana karada yer almaktadır.
+      New York’ta her mevsim belirgin olarak kendini gösterir. Sıcak yazlar, soğuk kışlar, ılık ilkbahar ve serin sonbahar yaşanmaktadır.</p>
+      <p class="text1">New York’ta yaşayan insanlar, New Yorklular yüzlerce yıllık kent yaşamının eşsiz kültürün temellerinin dayandığı kent. Farklı kültürden gelen insanlar, farklı sosyal sınıflar, kentteki büyük çeşitlilik kültürü de etkilemiştir.</p>
+</div>
+   
+<div class="res">
+  <div class="img">
+      <img src="newyork1.jpg" alt="Central Park" width="300" height="200">
+    <div class="desc">Central Park</div>
+  </div>
+</div>
+ 
+<div class="res">
+  <div class="img">
+    <img src="newyork2.jpg" alt="Times Square" width="300" height="200">
+    <div class="desc">Times Square</div>
+  </div>
+</div>
+  
+<div class="res">
+  <div class="img">
+    <img src="newyork3.jpg" alt="Empire State Building" width="300" height="400">
+    <div class="desc">Empire State Building</div>
+  </div>
+</div>
+     
+<div class="res">
+  <div class="img">
+    <img src="newyork5.jpg" alt="Night view of Mannathan" float="left" width="300" height="300">
+    <div class="desc">Night view of Mannathan</div>
+  </div>
+</div>
+       
+<div class="clearfix"></div>
+
+<!-- The Modal -->
+<div id="Model" class="modal">
+  <span class="close">x</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+var modal = document.getElementById('Model');
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+for (var k = 0; k < images.length; k++) {
+   images[k].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+</script>
+
+
+</body>
+</html>

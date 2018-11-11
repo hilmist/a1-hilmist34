@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="style1.css" />
+
+</head>
+<body class="background1">
+<a href="sehirler.html" target="_blank"; class="newyork">
+ <img src="home1.jpg" alt="Anasayfa" width="50" height="50" align="left"> </a>
+    
+<h1 class="welcome">Londra</h1>
+    <div style="padding:20px;">
+  <p class="text1">Birleşik Krallık’ın başkenti Londra Avrupa’nın en çok göç alan şehridir. Londra, etnik olarak dünyanın en kozmopolit şehirlerinden biridir. Çok uluslu, çok dilli, çok kültürlü ve çok renkli bir kent olan Londra’da Uzak Doğulu, Hintli, Balkanlı, kısaca dünyanın her yerinden insan bir arada yaşıyor. Londra’da yaklaşık 300 farklı dil konuşulmaktadır. Uluslararası turizmin kesişme noktasıdır. Dünyanın en kalabalık hava trafiği Londra hava trafiğidir. 5 uluslararası havaalanı bulunmaktadır.</p>
+        <p class="text1"> Müzeleri, yemyeşil parkları, festivalleri, gece hayatı ve hareketli alışveriş merkezleri ile Londra’da hayat bir an bile durmuyor. En önemli turistik mekânları, Parlamento Binası, Tower Bridge, Tower of London, Buckingham Sarayı, Trafalgar Meydanı ve London Eye’dır. Londra Büyük Şehri, Londra Şehri (City of London), Westminster Şehri ve 31 metropoliten-Londra-bölgesinden oluşur.</p>
+</div>
+
+<div class="res">
+  <div class="img">
+      <img src="londra1.jpg" alt="London Red telephone box " width="300" height="200">
+    <div class="desc">London Red telephone box </div>
+  </div>
+</div>
+
+
+<div class="res">
+  <div class="img">
+    <img src="londra2.jpg" alt="View of London" width="300" height="200">
+    <div class="desc">View of London</div>
+  </div>
+</div>
+
+<div class="res">
+  <div class="img">
+    <img src="londra3.jpg" alt="Big Ben" width="300" height="400">
+    <div class="desc">Big Ben</div>
+  </div>
+</div>
+
+<div class="res">
+  <div class="img">
+    <img src="londra5.jpg" alt="Tower Bridge" width="300" height="300" float="left">
+    <div class="desc">Tower Bridge</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- The Modal -->
+<div id="Model" class="modal">
+  <span class="close">x</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('Model');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+   images[i].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+</script>
+
+
+</body>
+</html>
